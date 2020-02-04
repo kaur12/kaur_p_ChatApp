@@ -3,7 +3,7 @@ import ChatMessage from "./modules/ChatMessage.js";
 
 const socket = io();
 
-function setUserId(sID, message) {
+function setUserId({sID, message}) {
     //debugger;
     vm.socketID = sID;
 }
@@ -46,7 +46,7 @@ const vm = new Vue({
     },
 
     components: {
-        new_message: ChatMessage
+        newmessage: ChatMessage
     },
 
     mounted: function() {
